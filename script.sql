@@ -1,0 +1,29 @@
+CREATE DATABASE DBLivros
+GO
+
+USE DBLivros
+GO
+
+CREATE TABLE LIVROS 
+(
+	Id INT PRIMARY KEY IDENTITY,
+	Titulo VARCHAR(250),
+	QuantidadePaginas INT
+)
+GO
+
+INSERT INTO LIVROS
+VALUES ('Alice no pais das maravilhas',150)
+GO
+
+INSERT INTO LIVROS
+VALUES ('Harry Potter',500)
+GO
+
+SELECT * FROM LIVROS
+
+DELETE FROM LIVROS WHERE Id = 2
+
+UPDATE LIVROS
+SET QuantidadePaginas = 500
+WHERE Id = 1
